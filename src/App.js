@@ -1,25 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/navBar' // importamos nuestro componente "navBar"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <NavBar /> 
+    </div>   // en la linea 8 utilizamos nuestro componente.
+  );         //el componente tiene que comenzar con mayuscula.
 }
+      
+
 
 export default App;
