@@ -1,13 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/navBar' // importamos nuestro componente "navBar"
+import Titulo from './components/titulos'
 
 function App() {
   return (
     <div className="App">
-      <NavBar /> 
-    </div>   // en la linea 8 utilizamos nuestro componente.
-  );         //el componente tiene que comenzar con mayuscula.
+      <NavBar />
+      <Titulo>
+        <p>Titulo de seccion de Pagina</p>
+      </Titulo>
+    </div>   
+  );         
 }
       
 
