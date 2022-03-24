@@ -1,14 +1,15 @@
 import './App.css';
 import NavBar from './components/navBar' // importamos nuestro componente "navBar"
-import Titulo from './components/titulos'
+import ListaProducto from './components/listaProductos';
+
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Titulo>
-        <p>Titulo de seccion de Pagina</p>
-      </Titulo>
+      <ListaProducto>
+        <p>Verano</p>
+      </ListaProducto>
     </div>   
   );         
 }
