@@ -9,7 +9,7 @@ export default function Card({data}) {
 
 
     return(
-        <div className="card-item">
+        <div className="cartas">
             <h2>{titulo}</h2>
             <p>Precio : $ {precio}</p>
             <p>Talle : {talle}</p>

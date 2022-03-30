@@ -17,3 +17,13 @@ ul{
 ul li{
 margin-right: 15px;
 }
+
+.contenedorCartas{
+  display: flex;
+  justify-content: center;
+}
+
+.cartas{
+  padding: 20px;
+  margin: 45px;
+}

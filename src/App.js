@@ -7,9 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <ListaProducto>
-        <p>Verano</p>
-      </ListaProducto>
+      <ListaProducto />
     </div>   
   );         
 }
