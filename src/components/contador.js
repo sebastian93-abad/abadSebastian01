@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 
 
 const Contador = ({stock}) => {
-    const [cantidad, setCantidad] = useState(0)
+    const [cantidad, setCantidad] = useState(1)
 
     const sumarCantidad = () =>{
         if(cantidad < stock){

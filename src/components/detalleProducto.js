@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Carta from './carta'
+import CartaDetalle from './cartaDetalle'
 import {dataProduct} from './productosAparte'
 
 
@@ -24,8 +24,13 @@ const DetalleProducto = () =>{
 
     return(
         <div className="contenedorCartas">
-            <Carta data={detalles}/>
-            {console.log(detalles)}
+            {detalles.map((detalle) => {
+                const {id} = detalle
+                return(
+                    <CartaDetalle data={detalle} key={id} />
+                )
+            })}
+
 
         </div>
     )

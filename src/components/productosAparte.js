@@ -1,3 +1,5 @@
+
+
     export let dataProduct = [
         {
             id: 1,
@@ -5,6 +7,9 @@
             talle:'s',
             precio:1500,
             stock:5,
+            cuotasSin: 6,
+            cuotasCon: 12,
+            img: '../imagenes/remeras'
         },
         {
             id: 2,
@@ -12,6 +17,9 @@
             talle:'m',
             precio:2000,
             stock:7,
+            cuotasSin: 6,
+            cuotasCon: 12,
+            img: '../imagenes/pantalon'
         },
         {
             id: 3,
@@ -19,6 +27,9 @@
             talle:'l',
             precio:5000,
             stock:10,
+            cuotasSin: 6,
+            cuotasCon: 12,
+            img: '../imagenes/camisa'
         },
         {
             id: 4,
@@ -26,5 +37,8 @@
             talle:'40',
             precio:10000,
             stock:15,
+            cuotasSin: 6,
+            cuotasCon: 12,
+            img: '../imagenes/zapatillas'
         }
     ]

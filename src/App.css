@@ -18,12 +18,15 @@ ul li{
 margin-right: 15px;
 }
 
-.contenedorCartas{
-  display: flex;
-  justify-content: center;
+.carta{
+  width: 300px;
+  background-color: blanchedalmond;
+  border-radius: 10px;
 }
 
-.cartas{
-  padding: 20px;
-  margin: 45px;
+.cartaDetalle{
+  width: 100%;
+  height: 100%;
+  background-color: bisque;
+
 }

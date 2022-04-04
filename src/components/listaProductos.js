@@ -24,7 +24,7 @@ const ListaProducto = ({children}) =>{
 
 
     return(
-        <div className="contenedorCartas">
+        <div className="contenedor">
             {productos.map((producto) => {
                 const {id} = producto
                 return(
