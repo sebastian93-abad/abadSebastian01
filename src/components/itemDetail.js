@@ -1,5 +1,5 @@
 import React from 'react'
-import Contador from './contador'
+import Contador from './itemCount'
 
 export default function CartaDetalle({data}) {
     const {titulo, precio, talle, stock, cuotasSin, cuotasCon, img} = data

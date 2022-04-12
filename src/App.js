@@ -1,16 +1,29 @@
 import './App.css';
-import NavBar from './components/navBar' // importamos nuestro componente "navBar"
-import ListaProducto from './components/listaProductos';
-import DetalleProducto from './components/detalleProducto';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// Rutas ---
+import HomePage from './paginas/homePage';
+import Detalle from './paginas/detalle';
+
+
+// Componentes ---
+import NavBar from './components/navBar' 
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <ListaProducto />
-      <DetalleProducto/>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="/detalle/:id" element={<Detalle />}/>
+        </Routes>
+      </BrowserRouter>
+
+
     </div>   
   );         
 }

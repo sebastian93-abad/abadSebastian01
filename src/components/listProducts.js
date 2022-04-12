@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Carta from './carta'
-import {dataProduct} from './productosAparte'
+import dataProduct from './productosAparte'
 
 const ListaProducto = ({children}) =>{
 

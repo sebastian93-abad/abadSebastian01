@@ -1,8 +1,8 @@
 
 
-    export let dataProduct = [
+    const dataProduct = [
         {
-            id: 1,
+            id: '1',
             titulo:'remera',
             talle:'s',
             precio:1500,
@@ -12,7 +12,7 @@
             img: '../imagenes/remeras'
         },
         {
-            id: 2,
+            id: '2',
             titulo:'pantalon',
             talle:'m',
             precio:2000,
@@ -22,7 +22,7 @@
             img: '../imagenes/pantalon'
         },
         {
-            id: 3,
+            id: '3',
             titulo:'camisa',
             talle:'l',
             precio:5000,
@@ -32,7 +32,7 @@
             img: '../imagenes/camisa'
         },
         {
-            id: 4,
+            id: '4',
             titulo:'zapatillas',
             talle:'40',
             precio:10000,
@@ -42,3 +42,5 @@
             img: '../imagenes/zapatillas'
         }
     ]
+
+export default dataProduct

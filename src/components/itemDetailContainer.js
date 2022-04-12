@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import CartaDetalle from './cartaDetalle'
-import {dataProduct} from './productosAparte'
+import CartaDetalle from './itemDetail'
+import dataProduct from './productosAparte'
 
 
 const DetalleProducto = () =>{
