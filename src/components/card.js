@@ -11,7 +11,6 @@ export default function Card({data, action}) {
 
     return(
         <div className="carta">
-            <h1>SOY EL DETALLE</h1>
             <h2>{titulo}</h2>
             <p>Precio : $ {precio}</p>
             <Contador stock={stock}/>

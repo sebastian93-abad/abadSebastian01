@@ -10,6 +10,7 @@ export default function ItemDetail({data}) {
 
     return(
         <div className='cartaDetalle'>
+            <h1>Detalle del Producto</h1>
             <h2>{titulo}</h2>
             <img src={img}/>
             <p>Precio : $ {precio}</p>
