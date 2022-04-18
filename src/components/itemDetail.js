@@ -1,7 +1,7 @@
 import React from 'react'
-import Contador from './itemCount'
+import ItemCount from './itemCount'
 
-export default function CartaDetalle({data}) {
+export default function ItemDetail({data}) {
     const {titulo, precio, talle, stock, cuotasSin, cuotasCon, img} = data
     
 
@@ -22,7 +22,7 @@ export default function CartaDetalle({data}) {
                     <li>Cuotas con interes: {cuotasCon}</li>
                 </ul>
             </p>
-            <Contador stock={stock}/>
+            <ItemCount stock={stock}/>
         </div>
     )
 }

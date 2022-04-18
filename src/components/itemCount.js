@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 
 
-const Contador = ({stock}) => {
+const ItemCount = ({stock}) => {
     const [cantidad, setCantidad] = useState(1)
 
     const sumarCantidad = () =>{
@@ -18,9 +19,11 @@ const Contador = ({stock}) => {
         }
     }
 
-    const agregarCarrito = ()=>{
-        console.log('los productos', {cantidad}, 'se agregaron al carrito')
+    const onAdd = () => {
+        console.log('producto agregardo')
+
     }
+
 
     return(
         <div>
@@ -28,16 +31,14 @@ const Contador = ({stock}) => {
             <button onClick={restarCantidad}>-</button>
             <p>{cantidad}</p>
             <button onClick={sumarCantidad}>+</button>
-            <hr></hr>
-            <button onClick={agregarCarrito}>Agregrar al Carrito</button>
-
+            <button onClick={onAdd}><Link to={'/cart'}>Agregar al Carrito</Link></button>
         </div>
     )
 
 }
     
 
-export default Contador
+export default ItemCount
 
 
 

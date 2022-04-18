@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import Carta from './carta'
+import Card from './card'
 import dataProduct from './productosAparte'
 
-const ListaProducto = ({children}) =>{
+const ListProducts = ({children}) =>{
 
 
     const [productos, setProductos] = useState([])
+    const [contador, setContador] = useState (0)
 
     const obtengoProducto = () => {
         return new Promise((resolve, reject) => {
@@ -22,13 +23,24 @@ const ListaProducto = ({children}) =>{
     },[])
 
 
+    const agregarAlContador = (e) =>{
+        e.stopPropagation()
+        setContador(contador + 1)
+        
+        
+    }
+
+        
+
+
 
     return(
         <div className="contenedor">
+            <h1>Productos agregados:{contador}</h1>
             {productos.map((producto) => {
                 const {id} = producto
                 return(
-                    <Carta data={producto} key={id}/>
+                    <Card data={producto} key={id} action={agregarAlContador}/>
 
                 )
     
@@ -37,7 +49,7 @@ const ListaProducto = ({children}) =>{
     )
 }
 
-export default ListaProducto
+export default ListProducts
 
 
 

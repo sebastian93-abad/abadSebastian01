@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react'
-import CartaDetalle from './itemDetail'
+import { useParams } from 'react-router-dom'
+import ItemDetail from './itemDetail'
 import dataProduct from './productosAparte'
 
 
-const DetalleProducto = () =>{
+const ItemDetailContainer = () =>{
     const [detalles, setDetalles] = useState([])
+
+    const {id} = useParams()
 
     const obtengoDetalle = (id) => {
         return new Promise  ((resolve, eject) => {
@@ -15,21 +18,20 @@ const DetalleProducto = () =>{
 
     }
 
-    useEffect (() => {
+    useEffect( () => {
         obtengoDetalle().then((data) =>{
-            setDetalles(data)
+            const myId = data.find(e => e.id === id)
+            setDetalles(myId)
         })
-    }, [])
+    }, [id])
 
 
     return(
         <div className="contenedorCartas">
-            {detalles.map((detalle) => {
-                const {id} = detalle
-                return(
-                    <CartaDetalle data={detalle} key={id} />
-                )
-            })}
+            <div>
+            {detalles? <ItemDetail data={detalles}></ItemDetail>
+            : <div>Cargando...</div>}
+            </div>
 
 
         </div>
@@ -38,7 +40,7 @@ const DetalleProducto = () =>{
 }
 
 
-export default DetalleProducto   
+export default ItemDetailContainer   
 
 
 
