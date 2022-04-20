@@ -1,10 +1,16 @@
 import React from 'react' //siempre hay que importar reac. 
 import Button from '@mui/material/Button'; // este import , es de la pagina "material ui"
-import ImagNav from './imgNav';
 import { Link } from 'react-router-dom';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CartContext from '../context/cartContext';
+import { useContext } from 'react';
 
 
-function NavBar(){  //este es el componente que creamos y luego lo utilizamos en "App.js"
+function NavBar(){
+  const { cartProducts } = useContext(CartContext)
+
+
+    
   return (
     //JSX
     <header className='contenedor'>
@@ -19,7 +25,8 @@ function NavBar(){  //este es el componente que creamos y luego lo utilizamos en
           <li><Button variant="contained">Nosotros</Button></li>
           <li><Button variant="contained">Contacto</Button></li>
       </ul>
-      <ImagNav/>
+      <ShoppingCartIcon/>
+      <p>{cartProducts.length}</p>
   </header>
   )
 }

@@ -12,21 +12,26 @@ import DetallesProductos from './paginas/detalleProductos';
 // Componentes ---
 import NavBar from './components/navBar' 
 
+// Contexto ---
+import { CartProvider } from './context/cartContext';
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar/>
-        <Routes>
-          <Route path="/" element={<HomePage />}/>
-          <Route path="/detalle/:id" element={<DetallesProductos/>}/>
-          <Route path="/cart" element={<Cart/>}/>
-          <Route path='*' element={<NotFoundPage />}/>
-        </Routes>
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar/>
+          <Routes>
+            <Route path="/" element={<HomePage />}/>
+            <Route path="/detalle/:id" element={<DetallesProductos/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path='*' element={<NotFoundPage />}/>
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
 
 
     </div>   
