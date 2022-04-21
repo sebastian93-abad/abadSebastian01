@@ -17,11 +17,22 @@ const CartProvider = ({children}) => {
 //Luego vamos a utilizar un "- spread operator -" --> setCartProducts(cartProducts => [...cartProducts, product ])
 // Con esto le decimos, que mantenga el valor anterior "...cartProducts" y que luego nos agrege el producto nuevo "product".
 
+    const eliminarProducto = (product) => {
+        console.log('quiero eliminar:',product)
+        setCartProducts( cartProducts.filter((cartProduct) => {
+            return cartProduct.id !== product.id
+
+
+        }))
+
+    }
+
 
 
     const data = {
         cartProducts,
-        addProduct
+        addProduct,
+        eliminarProducto
     }
 // creamos esta constante para pasar solo el "data" como parametro
 

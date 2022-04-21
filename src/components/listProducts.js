@@ -21,12 +21,6 @@ const ListProducts = ({children}) =>{
         })
     },[])
 
-
-
-        
-
-
-
     return(
         <div className="contenedor">
             {productos.map((producto) => {
@@ -39,9 +33,15 @@ const ListProducts = ({children}) =>{
             })}
         </div>
     )
+
 }
 
 export default ListProducts
+        
+
+
+
+
 
 
 

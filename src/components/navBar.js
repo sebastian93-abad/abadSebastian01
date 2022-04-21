@@ -25,8 +25,13 @@ function NavBar(){
           <li><Button variant="contained">Nosotros</Button></li>
           <li><Button variant="contained">Contacto</Button></li>
       </ul>
-      <ShoppingCartIcon/>
+      <div>
+        <button><Link to={'/cart'}><ShoppingCartIcon/></Link></button>
+        <p>Agregar al Carrito</p>
+      </div>
       <p>{cartProducts.length}</p>
+      
+      
   </header>
   )
 }

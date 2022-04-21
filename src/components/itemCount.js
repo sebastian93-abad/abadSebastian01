@@ -19,10 +19,6 @@ const ItemCount = ({stock}) => {
         }
     }
 
-    const onAdd = () => {
-        console.log('producto agregardo')
-
-    }
 
 
     return(
@@ -31,7 +27,6 @@ const ItemCount = ({stock}) => {
             <button onClick={restarCantidad}>-</button>
             <p>{cantidad}</p>
             <button onClick={sumarCantidad}>+</button>
-            <button onClick={onAdd}><Link to={'/cart'}>Agregar al Carrito</Link></button>
         </div>
     )
 
