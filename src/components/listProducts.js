@@ -1,18 +1,32 @@
 import React, {useState, useEffect} from 'react'
 import Card from './card'
-import dataProduct from './productosAparte'
+import db from '../../src/firebase'
+import { collection, getDocs} from 'firebase/firestore'
 
 const ListProducts = ({children}) =>{
 
 
     const [productos, setProductos] = useState([])
 
-    const obtengoProducto = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() =>{
-                resolve(dataProduct)
-            }, 2000 );
-    })
+    const obtengoProducto = async () => {
+        const coleccion = collection(db, 'productos')
+        const productosSnap = await getDocs(coleccion)
+        
+
+        const productList = productosSnap.docs.map((doc) => {
+            let product = doc.data()
+            product.id = doc.id
+            console.log('product', product)
+            return product
+        })
+        return productList
+            
+            
+
+        
+
+
+        
     } 
 
     useEffect ( () => {
