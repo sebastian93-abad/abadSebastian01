@@ -21,9 +21,10 @@ function NavBar(){
       </div>
       <ul>
           <li><Button className="custom-btn" variant="contained"><Link to={'/'}>Inicio</Link></Button></li>
-          <li><Button variant="contained">Productos</Button></li>
-          <li><Button variant="contained">Nosotros</Button></li>
-          <li><Button variant="contained">Contacto</Button></li>
+          <li><Button variant="contained">Remeras</Button></li>
+          <li><Button variant="contained">Pantalones</Button></li>
+          <li><Button variant="contained">Zapatillas</Button></li>
+          <li><Button variant="contained">Camisas</Button></li>
       </ul>
       <div>
         <button><Link to={'/cart'}><ShoppingCartIcon/></Link></button>
